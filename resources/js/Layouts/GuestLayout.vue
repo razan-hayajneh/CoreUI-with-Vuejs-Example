@@ -41,14 +41,9 @@
 </template>
 <script>
     import { defineComponent } from 'vue'
-    import { Head, Link } from '@inertiajs/inertia-vue3';
 
     export default defineComponent({
         name:"GuestLayout",
-        components: {
-            Head,
-            Link
-        },
         props: {
             canLogin: {
                 Type: Boolean,

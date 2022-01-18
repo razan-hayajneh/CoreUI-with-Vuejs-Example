@@ -1,6 +1,33 @@
 <template>
     <Head title="Welcome" />
     <GuestLayout :canLogin="canLogin" :canRegister="canRegister"></GuestLayout>
+    <CCardGroup>
+    <CCard>
+        <CCardImage orientation="top" src="/images/browser_logo.jpg" />
+        <CCardBody>
+        <CCardTitle>Card title</CCardTitle>
+        <CCardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CCardText>
+        <CCardText><small class="text-muted">Last updated 3 mins ago</small></CCardText>
+        </CCardBody>
+    </CCard>
+    <CCard>
+        <CCardImage orientation="top" src="/images/browser_logo.jpg" />
+        <CCardBody>
+        <CCardTitle>Card title</CCardTitle>
+        <CCardText>This card has supporting text below as a natural lead-in to additional content.</CCardText>
+        <CCardText><small class="text-muted">Last updated 3 mins ago</small></CCardText>
+        </CCardBody>
+    </CCard>
+    <CCard>
+        <CCardImage orientation="top" src="/images/browser_logo.jpg" />
+        <CCardBody>
+        <CCardTitle>Card title</CCardTitle>
+        <CCardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CCardText>
+        <CCardText><small class="text-muted">Last updated 3 mins ago</small></CCardText>
+        </CCardBody>
+    </CCard>
+</CCardGroup>
+    <Footer></Footer>
 </template>
 
 <style scoped>
@@ -69,14 +96,15 @@
 
 <script>
     import { defineComponent } from 'vue'
-    import { Head, Link } from '@inertiajs/inertia-vue3'
+    import { Head } from '@inertiajs/inertia-vue3'
     import GuestLayout from '@/Layouts/GuestLayout.vue'
+    import Footer from '@/Components/Footer.vue'
 
     export default defineComponent({
         components: {
             Head,
-            Link,
-            GuestLayout
+            GuestLayout,
+            Footer
         },
         props: {
             canLogin: Boolean,
